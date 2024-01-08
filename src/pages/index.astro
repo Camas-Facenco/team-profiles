@@ -1,14 +1,27 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Carousel from "../components/Carousel.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Facenco">
-	<main class="test h-screen w-full">
-	</main>
+  <main class="test h-screen w-full">
+    <div class="grid gap-4 container mx-auto w-full pt-7">
+		<figure class="flex justify-center items-center">
+			<img src="./assets/logo.png" alt="" class="w-2/4 md:w-1/4">
+		</figure>
+    
+        <Carousel/>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	.test{
-		background: linear-gradient(to left, rgb(0, 0, 0), rgb(0, 0, 0), rgb(17, 24, 39));
-	}
+  .test {
+    background: linear-gradient(
+      to left,
+      rgb(0, 0, 0),
+      rgb(0, 0, 0),
+      rgb(17, 24, 39)
+    );
+  }
 </style>
