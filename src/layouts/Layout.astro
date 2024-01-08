@@ -5,6 +5,7 @@ interface Props {
 
 const { title } = Astro.props;
 import '@fontsource-variable/onest';
+import Header from '../components/Header.astro';
 ---
 
 <!doctype html>
@@ -16,11 +17,13 @@ import '@fontsource-variable/onest';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
 	</head>
 	<body>
-		<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+		<Header/>
 		<slot  />
 	</body>
+	
 </html>
 <style is:global>
 	:root {
