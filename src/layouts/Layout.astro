@@ -31,6 +31,12 @@ import Header from '../components/Header.astro';
 	}
 	html {
 		font-family:'Onest Variable', system-ui, sans-serif;
+		scroll-behavior: smooth;
 	}
 	
+	@media (prefers-reduced-motion: reduce) {
+    :global(html) {
+      scroll-behavior: auto;
+    }
+  }
 </style>
