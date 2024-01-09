@@ -1,11 +1,11 @@
 ---
-
+const {id} = Astro.props
 ---
 
-<header>
-    <nav class="header-container w-full text-white">
+<header id={id}>
+    <nav class="header-container w-full text-white fixed z-10">
         <div class="flex flex-wrap items-center justify-between container mx-auto p-8">
-            <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="#home"  class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="./assets/logo.png" class="h-8" alt="Flowbite Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Facenco</span>
             </a>
@@ -19,13 +19,17 @@
                 </button>
             </div>
             <div id="mega-menu" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
-                <ul class="flex flex-col mt-4 font-medium items-center  rtl:space-x-reverse md:flex-row md:mt-0 md:space-x-8 md:justify-evenly">
+                <ul class="flex flex-col mt-4 font-medium items-center  rtl:space-x-reverse md:flex-row md:mt-0 md:space-x-8 md:justify-evenly transition-all   ">
                     <li>
-                        <a href="#" class="block capitalize py-2 px-3 text-white border-b border-gray-100 hover:bg-transparent hover:text-[#A99254] md:hover:bg-transparent md:border-0  md:p-0" aria-current="page">Organización</a>
+                        <a href="#home" class="block capitalize py-2 px-3 text-white border-b border-gray-100 hover:bg-transparent hover:text-[#A99254] md:hover:bg-transparent md:border-0  md:p-0" aria-current="page">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="#organization" class="block capitalize py-2 px-3 text-white border-b border-gray-100 hover:bg-transparent hover:text-[#A99254] md:hover:bg-transparent md:border-0  md:p-0" aria-current="page">Organización</a>
                     </li>
                     
                     <li>
-                        <a href="#" class="block capitalize py-2 px-3 text-white border-b border-gray-100 hover:bg-transparent hover:text-[#A99254] md:hover:bg-transparent md:border-0 md:p-0" aria-current="page">Contacto</a>
+                        <a href="#contact" class="block capitalize py-2 px-3 text-white border-b border-gray-100 hover:bg-transparent hover:text-[#A99254] md:hover:bg-transparent md:border-0 md:p-0" aria-current="page">Contacto</a>
                     </li>
                     <li>
                         <form class="pt-4 md:py-0">

@@ -1,142 +1,148 @@
 ---
-
+const {id} = Astro.props
 ---
 
-<div class="flex items-center justify-center w-full h-full pb-24 px-4">
-  <div class="w-full relative flex items-center justify-center">
-    <button
-      aria-label="slide backward"
-      class="bg-white w-8 h-8 rounded-full flex justify-center items-center text-black lg:hover:bg-[#A99254] lg:hover:text-white absolute z-30 left-0 ml-10 focus:outline-none focus:ring-transparent cursor-pointer"
-      id="prev"
-    >
-      <svg
-        width="8"
-        height="14"
-        viewBox="0 0 8 14"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+<div class="grid gap-4 w-full pt-40 px-8" id={id}>
+  <figure class="flex justify-center items-center">
+    <img src="./assets/logo.png" alt="" class="w-2/4 md:w-1/4" />
+  </figure>
+
+  <div class="flex items-center justify-center w-full h-full pb-24 px-4">
+    <div class="w-full relative flex items-center justify-center">
+      <button
+        aria-label="slide backward"
+        class="bg-white w-8 h-8 rounded-full flex justify-center items-center text-black lg:hover:bg-[#A99254] lg:hover:text-white absolute z-30 left-0 ml-10 focus:outline-none focus:ring-transparent cursor-pointer"
+        id="prev"
       >
-        <path
-          d="M7 1L1 7L7 13"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
-    </button>
-    <div
-      class="w-[292px] md:w-full h-full mx-auto overflow-x-hidden overflow-y-hidden"
-    >
+        <svg
+          width="8"
+          height="14"
+          viewBox="0 0 8 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7 1L1 7L7 13"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </button>
       <div
-        id="slider"
-        class="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700"
+        class="w-[292px] md:w-full h-full mx-auto overflow-x-hidden overflow-y-hidden"
       >
-        <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
-          <img
-            src="./assets/marca1.webp"
-            alt="black chair and white table"
-            class="object-center w-[292px] h-[40%] rounded-md"
-          />
-        </div>
-        <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
-          <img
-            src="./assets/marca1.webp"
-            alt="black chair and white table"
-            class="object-center w-[292px] h-[40%] rounded-md"
-          />
-        </div>
-        <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
-          <img
-            src="./assets/marca1.webp"
-            alt="black chair and white table"
-            class="object-center w-[292px] h-[40%] rounded-md"
-          />
-        </div>
-        <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
-          <img
-            src="./assets/marca1.webp"
-            alt="black chair and white table"
-            class="object-center w-[292px] h-[40%] rounded-md"
-          />
-        </div>
-        <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
-          <img
-            src="./assets/marca1.webp"
-            alt="black chair and white table"
-            class="object-center w-[292px] h-[40%] rounded-md"
-          />
-        </div>
-        <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
-          <img
-            src="./assets/marca1.webp"
-            alt="black chair and white table"
-            class="object-center w-[292px] h-[40%] rounded-md"
-          />
-        </div>
-        <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
-          <img
-            src="./assets/marca1.webp"
-            alt="black chair and white table"
-            class="object-center w-[292px] h-[40%] rounded-md"
-          />
-        </div>
-        <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
-          <img
-            src="./assets/marca1.webp"
-            alt="black chair and white table"
-            class="object-center w-[292px] h-[40%] rounded-md"
-          />
-        </div>
-        <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
-          <img
-            src="./assets/marca1.webp"
-            alt="black chair and white table"
-            class="object-center w-[292px] h-[40%] rounded-md"
-          />
-        </div>
-        <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
-          <img
-            src="./assets/marca1.webp"
-            alt="black chair and white table"
-            class="object-center w-[292px] h-[40%] rounded-md"
-          />
-        </div>
-        <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
-          <img
-            src="./assets/marca1.webp"
-            alt="black chair and white table"
-            class="object-center w-[292px] h-[40%] rounded-md"
-          />
-        </div>
-        <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
-          <img
-            src="./assets/marca1.webp"
-            alt="black chair and white table"
-            class="object-center w-[292px] h-[40%] rounded-md"
-          />
+        <div
+          id="slider"
+          class="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700"
+        >
+          <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
+            <img
+              src="./assets/marca1.webp"
+              alt="black chair and white table"
+              class="object-center w-[292px] h-[40%] rounded-md"
+            />
+          </div>
+          <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
+            <img
+              src="./assets/marca1.webp"
+              alt="black chair and white table"
+              class="object-center w-[292px] h-[40%] rounded-md"
+            />
+          </div>
+          <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
+            <img
+              src="./assets/marca1.webp"
+              alt="black chair and white table"
+              class="object-center w-[292px] h-[40%] rounded-md"
+            />
+          </div>
+          <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
+            <img
+              src="./assets/marca1.webp"
+              alt="black chair and white table"
+              class="object-center w-[292px] h-[40%] rounded-md"
+            />
+          </div>
+          <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
+            <img
+              src="./assets/marca1.webp"
+              alt="black chair and white table"
+              class="object-center w-[292px] h-[40%] rounded-md"
+            />
+          </div>
+          <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
+            <img
+              src="./assets/marca1.webp"
+              alt="black chair and white table"
+              class="object-center w-[292px] h-[40%] rounded-md"
+            />
+          </div>
+          <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
+            <img
+              src="./assets/marca1.webp"
+              alt="black chair and white table"
+              class="object-center w-[292px] h-[40%] rounded-md"
+            />
+          </div>
+          <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
+            <img
+              src="./assets/marca1.webp"
+              alt="black chair and white table"
+              class="object-center w-[292px] h-[40%] rounded-md"
+            />
+          </div>
+          <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
+            <img
+              src="./assets/marca1.webp"
+              alt="black chair and white table"
+              class="object-center w-[292px] h-[40%] rounded-md"
+            />
+          </div>
+          <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
+            <img
+              src="./assets/marca1.webp"
+              alt="black chair and white table"
+              class="object-center w-[292px] h-[40%] rounded-md"
+            />
+          </div>
+          <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
+            <img
+              src="./assets/marca1.webp"
+              alt="black chair and white table"
+              class="object-center w-[292px] h-[40%] rounded-md"
+            />
+          </div>
+          <div class="flex flex-shrink-0 relative w-auto sm:w-auto rounded-md">
+            <img
+              src="./assets/marca1.webp"
+              alt="black chair and white table"
+              class="object-center w-[292px] h-[40%] rounded-md"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <button
-      aria-label="slide forward"
-      class="bg-white w-8 h-8 rounded-full flex justify-center items-center text-black lg:hover:bg-[#A99254] lg:hover:text-white absolute z-30 right-0 mr-10 focus:outline-none"
-      id="next"
-    >
-      <svg
-        width="8"
-        height="14"
-        viewBox="0 0 8 14"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        aria-label="slide forward"
+        class="bg-white w-8 h-8 rounded-full flex justify-center items-center text-black lg:hover:bg-[#A99254] lg:hover:text-white absolute z-30 right-0 mr-10 focus:outline-none"
+        id="next"
       >
-        <path
-          d="M1 1L7 7L1 13"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
-    </button>
+        <svg
+          width="8"
+          height="14"
+          viewBox="0 0 8 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 1L7 7L1 13"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    </div>
   </div>
 </div>
 
