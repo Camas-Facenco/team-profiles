@@ -1,13 +1,16 @@
 ---
-const { picture, position, name } = Astro.props;
+const { picture, position, name, href } = Astro.props;
 const { class: className } = Astro.props;
 ---
 
 <div class=`flex flex-col cursor-pointer items-center ${className}`>
-  <figure class="rounded-full w-[150px] h-[150px] border-[#A99254] border p-2">
-    <img src={picture} alt="profile picture" class="rounded-full w-full" />
-  </figure>
+  <a href={href}>
 
-  <p class="text-[#A99254] mt-4 text-center w-full">{position}</p>
-  <p class="text-white text-center w-full">{name}</p>
+    <figure class="rounded-full w-[150px] h-[150px] border-[#A99254] border p-2">
+      <img src={picture} alt="profile picture" class="rounded-full w-full" />
+    </figure>
+    
+    <p class="text-[#A99254] mt-4 text-center w-full">{position}</p>
+    <p class="text-white text-center w-full">{name}</p>
+  </a>
 </div>
